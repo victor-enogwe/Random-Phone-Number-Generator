@@ -1,8 +1,6 @@
 const glob = require('glob')
 const path = require('path')
-const sandbox = require('sinon').createSandbox()
-const { server, onError } = require('../../app')
-const logger = require('../../logs')
+const { sandbox, logger, server } = require('./helpers')
 
 const specFiles = glob.sync('*.spec.js', {
   cwd: path.resolve(__dirname), matchBase: true, ignore: ['helpers/**']
