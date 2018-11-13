@@ -4,7 +4,7 @@
   "engines": {
     "node": "10.5.0"
   },
-  "description": "An app to generate spreadsheets with unique random phone numbers every time.",
+  "description": "An app to generate spreadsheets with unique random phone numbers.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
