@@ -100,10 +100,9 @@ function transformPhoneData (req, res) {
     if (min) data.min = `0${Math.min(...data.numbers)}`
   }
   if (count) {
+    data.count = data.numbers.length
     if (req.method === 'POST') {
-      data.count = uniqueRandomPhoneNumbers.totalNumberOfPhoneNumbers()
-    } else {
-      data.count = data.numbers.length
+      data.totalCount = uniqueRandomPhoneNumbers.totalNumberOfPhoneNumbers()
     }
   }
 
