@@ -2,7 +2,7 @@
   "name": "Random-Phone-Number-Generator",
   "version": "1.0.0",
   "engines": {
-    "node": ">=9.8.0"
+    "node": "10.5.0"
   },
   "description": "An app to generate spreadsheets with unique random phone numbers every time.",
   "main": "app.js",
