@@ -63,3 +63,4 @@ typings/
 .nyc_output
 coverage
 logs/*.log
+data/

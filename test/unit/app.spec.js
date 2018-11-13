@@ -1,13 +1,6 @@
 const { expect, serverError, logger, onError } = require('../helpers')
 
 describe('App', () => {
-  describe('- Server', () => {
-    it('should be started', () => {
-      expect(logger.info.calledWith(`🚧 App is Listening on port 3000`))
-        .to.equal(true)
-    })
-  })
-
   describe('- onError', () => {
     it('should log an error', () => {
       onError(serverError('listen', 'EACCES'))

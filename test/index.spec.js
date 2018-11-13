@@ -1,19 +1,27 @@
 const glob = require('glob')
 const path = require('path')
-const { sandbox, logger, server } = require('./helpers')
+const fs = require('fs')
+const { sandbox, logger } = require('./helpers')
 
 const specFiles = glob.sync('*.spec.js', {
   cwd: path.resolve(__dirname), matchBase: true, ignore: ['helpers/**']
 })
 
 before(() => {
-  server.listen(3000)
   sandbox.spy(logger, 'info')
   sandbox.spy(logger, 'error')
 })
 
 after(() => {
-  server.close()
+  glob.sync(
+    '*.txt',
+    {
+      cwd: path.resolve(__dirname, '../data'),
+      matchBase: true,
+      absolute: true
+    }
+  ).forEach(file => fs.unlinkSync(file))
+  fs.rmdirSync(path.resolve(__dirname, '../data'))
   sandbox.restore()
 })
 
