@@ -132,7 +132,7 @@ class UniqueRandomPhoneNumbers {
   retrieveAllPhoneNumbers () {
     return this.retrieveFilePaths()
       .map(path => fs.readFileSync(path, 'utf8').split(','))
-      .reduce((a, b) => ([...a, ...b]))
+      .reduce((a, b) => ([...a, ...b]), [])
   }
 
   totalNumberOfPhoneNumbers () {

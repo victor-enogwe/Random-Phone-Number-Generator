@@ -29,6 +29,38 @@ Start local development using the following steps:
 
 This application can be tested locally by running `npm test`
 
+## Api Routes And Postman Collection
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/ebfdd61d0dbf85e5f94b)
+
+- GET `/` API home
+- `/numbers`
+  
+  create/get the saved numbers
+
+  **query params**
+
+  - `count` = true
+  - `sort` = ASC or DESC
+  - `min` = true
+  - `max` = true
+
+  **Create**
+
+  - `POST`
+
+    **query params**
+
+    uses the numbers query params also
+
+    - `length` = `number eg 10000`
+
+  **Retrieve**
+
+  uses the numbers query params also
+
+  - `GET`
+
 ## How To Contribute
 
 To contribute, fork this repository, make required changes and open a pull request.
