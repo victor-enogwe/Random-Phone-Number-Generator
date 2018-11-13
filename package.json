@@ -4,7 +4,7 @@
   "engines": {
     "node": "10.5.0"
   },
-  "description": "An app to generate spreadsheets with unique random phone numbers every time.",
+  "description": "An app to generate spreadsheets with unique random phone numbers.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -58,7 +58,6 @@
   "devDependencies": {
     "chai": "4.2.0",
     "coveralls": "3.0.2",
-    "glob": "7.1.3",
     "mocha": "5.2.0",
     "nodemon": "1.18.4",
     "nyc": "13.1.0",
@@ -68,6 +67,7 @@
   },
   "dependencies": {
     "express": "4.16.4",
+    "glob": "7.1.3",
     "helmet": "3.14.0",
     "moment": "2.22.2",
     "morgan": "1.9.1",

@@ -1,5 +1,8 @@
 # Random-Phone-Number-Generator
 
+[![Build Status](https://travis-ci.org/victor-enogwe/Random-Phone-Number-Generator.svg?branch=staging)](https://travis-ci.org/victor-enogwe/Random-Phone-Number-Generator)
+[![Coverage Status](https://coveralls.io/repos/github/victor-enogwe/Random-Phone-Number-Generator/badge.svg?branch=staging)](https://coveralls.io/github/victor-enogwe/Random-Phone-Number-Generator?branch=staging)
+
 An app to generate unique random phone numbers.
 
 ## Technologies
