@@ -45,7 +45,8 @@ describe('/numbers', () => {
     it('should count phone numbers', () => app.post('/numbers?count=true')
       .then((response) => {
         expect(response.status).to.equal(201)
-        expect(response.body.data.count).to.equal(140)
+        expect(response.body.data.count).to.equal(10)
+        expect(response.body.data.totalCount).to.equal(140)
       }))
   })
 
