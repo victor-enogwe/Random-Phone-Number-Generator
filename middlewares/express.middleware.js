@@ -90,10 +90,15 @@ function homeMiddleware (req, res) {
 function transformPhoneData (req, res) {
   const { data } = req.body
   const { sort, max, min, count } = req.query
-  if (sort.toUpperCase() === 'DESC') data.numbers.sort((a, b) => a + b)
-  if (sort.toUpperCase() === 'ASC') data.numbers.sort((a, b) => a - b)
-  if (max) data.max = `0${Math.max(...data.numbers)}`
-  if (min) data.min = `0${Math.min(...data.numbers)}`
+  if (data.numbers.length) {
+    if (sort) {
+      if (sort.toUpperCase() === 'DESC') data.numbers.sort((a, b) => a + b)
+      if (sort.toUpperCase() === 'ASC') data.numbers.sort((a, b) => a - b)
+    }
+
+    if (max) data.max = `0${Math.max(...data.numbers)}`
+    if (min) data.min = `0${Math.min(...data.numbers)}`
+  }
   if (count) {
     if (req.method === 'POST') {
       data.count = uniqueRandomPhoneNumbers.totalNumberOfPhoneNumbers()
