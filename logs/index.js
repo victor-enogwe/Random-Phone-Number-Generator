@@ -84,5 +84,4 @@ function logServiceError (error) {
   return logger.error(logMsg)
 }
 
-
 module.exports = { logger, logServiceError }
