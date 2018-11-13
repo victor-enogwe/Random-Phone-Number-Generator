@@ -5,7 +5,7 @@ const http = require('http')
 const { NODE_ENV } = process.env
 const isDevMode = NODE_ENV === 'development'
 const isTestMode = NODE_ENV === 'test'
-const { logger } = require('./logs/index')
+const { logger } = require('./logs')
 const {
   httpRequestLoggingMiddleware,
   phoneNumbersMiddleware,
