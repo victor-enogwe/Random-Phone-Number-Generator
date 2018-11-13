@@ -15,11 +15,13 @@ const errorStub = {
           date: Date.now()
         },
         client: {
-          servername: 'wirebot'
+          servername: 'random_phone_number'
         }
       }
     }
   }
 }
 
-module.exports = { errorStub }
+const serverError = (syscall, code) => ({ syscall, code })
+
+module.exports = { errorStub, serverError }
